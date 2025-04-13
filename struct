@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract structLearn{
+    
+    //basically a data type with mixed data(s)
+    struct iden{
+        uint id;
+        string name;
+       address owner;
+    }
+
+    iden[] public ids;  
+
+   function addId(uint id, string memory name, address owner) public {
+    iden memory newIden = iden({
+        id: id,
+        name: name,
+        owner: owner
+    });
+
+    ids.push(newIden);
+}
+
+
+}
