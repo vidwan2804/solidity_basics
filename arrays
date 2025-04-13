@@ -1,0 +1,30 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.26;
+
+contract array {
+    uint[] internal arr1;
+    uint[] arr2 = [1,2,3,4];
+
+
+    function setArray(uint num) public {
+        arr1.push(num);
+    }
+
+    function delArray() public {
+        arr1.pop();
+    }
+
+
+    function tofindLen() public view returns(uint256){
+        return arr2.length;
+
+    }
+
+    
+
+    function getArrValue(uint num2) public view returns(uint){
+        return arr1[num2];
+    }
+       
+    
+}
