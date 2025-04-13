@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.26;
+
+contract mapping1{
+    mapping(address=>uint) public mymap;
+
+    function get(address _addr ) public view returns(uint ){
+        return mymap[_addr];
+    }
+
+    function set(address pik , uint num) public{
+        mymap[pik] = num;
+    }
+
+    function del(address _addr ) public {
+        delete mymap[_addr];
+    }
+}
